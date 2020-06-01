@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{124D3851-F85D-4A89-BEBE-BDFA519F5987}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jusoft.YiFang.Db</RootNamespace>
+    <AssemblyName>Jusoft.YiFang.Db</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <AssemblyVersion>1.0.125.18316</AssemblyVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TopSdk">
+      <HintPath>..\Lib\TopSdk.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AC_SysRoles.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AC_SysUsers.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUTH_User_Command.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AUTH_User_Menu.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BA_Attachment.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BA_BusinessType.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BA_SysCommand.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BA_SysEnType.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BA_SysMenu.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CS_CustomerService.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\PredicateExtensions.cs" />
+    <Compile Include="f_getEnTypeList_Result.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Identity\AbStore.cs" />
+    <Compile Include="Identity\IdentityConfig.cs" />
+    <Compile Include="Identity\IdentityResources.cs" />
+    <Compile Include="Identity\LoginUserInfo.cs" />
+    <Compile Include="KS_Confirm.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KS_Customer.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KS_Customer_Approval.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KS_Customer_Replenish.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Allocation.cs" />
+    <Compile Include="OR_Department.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OR_Person.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="REF_Person_Department.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ST_Store.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdSystem\AccessToken.cs" />
+    <Compile Include="ThirdSystem\DingTalkApi.cs" />
+    <Compile Include="v_Customer.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_CustomerService.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_CustomerList.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_KSConfirm.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcBASysArea.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcMissionCenter.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcOrPerson.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcStStore.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcSysEnType.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcSysRoles.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_PcSysUser.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_StortArea.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Jusoft_StortDetails.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_jusoft_SysMenu_Command.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Kf_DataList.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_KsType.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Ks_DataList.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_StoreArchives.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="v_Store_Person.cs">
+      <DependentUpon>DataEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DataEntities.edmx.diagram">
+      <DependentUpon>DataEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="EntityFramework.zh-Hans">
+      <Version>6.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNet.Identity.Owin">
+      <Version>2.2.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataEntities.edmx</DependentUpon>
+      <LastGenOutput>DataEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DataEntities.edmx</DependentUpon>
+      <LastGenOutput>DataEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
