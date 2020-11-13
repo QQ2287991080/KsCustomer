@@ -48,9 +48,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Compression">
-      <HintPath>Z:\测试\CompressionFile\Compression\bin\Debug\Compression.dll</HintPath>
-    </Reference>
     <Reference Include="Jusoft.Mvc.Html">
       <HintPath>..\lib\Jusoft.Mvc.Html\Jusoft.Mvc.Html.dll</HintPath>
     </Reference>

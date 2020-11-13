@@ -48,7 +48,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="TopSdk">
-      <HintPath>D:\QQ浏览\TopSdk.dll</HintPath>
+      <HintPath>..\Lib\TopSdk.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

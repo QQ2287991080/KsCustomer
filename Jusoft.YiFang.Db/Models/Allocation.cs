@@ -29,13 +29,21 @@ namespace Jusoft.YiFang.Db.Models
         //public const long AgentId = 313591395;
         //public const string ProcessCode = "PROC-FA91ADEC-4337-4217-BB5A-F415242CCA9E";
 
+        /// <summary>
+        /// 钉钉集成社
+        /// </summary>
+        public const string Appkey = "dinghogzglg0kaedve4o";
+        public const string Appsecret = "YrS6cshkFN2X8ezljEotnnnhFPRFiyzaVXpkNfd95RXnaxl0duYZ8mq0TPMPH3dh";
+        public const string CorpId = "ding04c316c74b2df244a39a90f97fcb1e09";
+        public const long AgentId = 347651726;
+        public const string ProcessCode = "PROC-D2556BE3-2929-437F-861F-DE2442BE6B0B";
 
         //hsay
-        public const string Appkey = "dingtspfjqrnmkbndw7f";
-        public const string Appsecret = "z2_-TWNszaupjwFtHIyP567KqbcxoHbXrh9vRTa1QwjODj2fQR5XOZlKEr8OlpSS";
-        public const string CorpId = "dingff609c7977dc6754";
-        public const long AgentId = 331132158;
-        public const string ProcessCode = "PROC-8B8554F7-11BE-417D-B17B-C2775ABDCE12";
+        //public const string Appkey = "dingtspfjqrnmkbndw7f";
+        //public const string Appsecret = "z2_-TWNszaupjwFtHIyP567KqbcxoHbXrh9vRTa1QwjODj2fQR5XOZlKEr8OlpSS";
+        //public const string CorpId = "dingff609c7977dc6754";
+        //public const long AgentId = 331132158;
+        //public const string ProcessCode = "PROC-8B8554F7-11BE-417D-B17B-C2775ABDCE12";
 
 
         //S

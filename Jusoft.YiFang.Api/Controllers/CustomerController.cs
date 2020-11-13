@@ -1,5 +1,4 @@
-﻿using Compression.Services;
-using DingTalk.Api;
+﻿using DingTalk.Api;
 using DingTalk.Api.Request;
 using DingTalk.Api.Response;
 using Jusoft.Auxiliary;
@@ -15,6 +14,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Linq.Expressions;
@@ -598,6 +598,7 @@ namespace Jusoft.YiFang.Api.Controllers
             }
             catch (Exception ex)
             {
+                LogHelper.WriteLog(ex.Message);
                 return this.JsonRespData(1000, ex.Message);
             }
         }
@@ -799,6 +800,8 @@ namespace Jusoft.YiFang.Api.Controllers
         }
         public string ShenPi(long dCode, string usrId, string name, string desc, Dictionary<string, List<string>> image,decimal id)
         {
+            // string url = "http://47.114.175.250:12705/";
+            string phone = ConfigurationManager.AppSettings["Phone"];
             DingTalkApproval approval = new DingTalkApproval();
             long agentId = Allocation.AgentId;
             string processCode = Allocation.ProcessCode;
@@ -806,7 +809,7 @@ namespace Jusoft.YiFang.Api.Controllers
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic.Add("客诉类型", name);
             dic.Add("问题描述", desc);
-            dic.Add("详情", $"http://47.103.68.172:6078/#/store/view-demo?id={id}");//http://47.103.68.172:6076/  http://121.199.49.237:12705/
+            dic.Add("详情", $"{phone}/#/store/bill-details?id={id}");//http://47.103.68.172:6076/  http://121.199.49.237:12705/
             //dic.Add("提交时间", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
             string token = AccessToken.GetAccessToken();
             string shenpi = approval.Initiate2(agentId, processCode, dCode,usrId,token , dic, image,out string str);

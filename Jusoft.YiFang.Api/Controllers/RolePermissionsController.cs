@@ -536,7 +536,7 @@ namespace Jusoft.YiFang.Api.Controllers
                 var SysRole = dbContext.AC_SysRoles.FirstOrDefault(p => p.Id == model.Id);
                 if (SysRole != null)
                 {
-                    var SysRoleCode = dbContext.AC_SysRoles.Where(p => p.Code == model.Code).ToList();
+                    var SysRoleCode = dbContext.AC_SysRoles.Where(p => p.Code == model.Code&&p.Id!=model.Id).ToList();
                     if (SysRoleCode.Count() > 0)
                     {
                         rs.strResult = "角色编码已存在，请重新输入！";

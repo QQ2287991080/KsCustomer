@@ -3,6 +3,7 @@ using Jusoft.YiFang.Api.Help;
 using Jusoft.YiFang.Dto.Audio;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -70,9 +71,12 @@ namespace Jusoft.YiFang.Api.Controllers
                 var Mp3ServerPath = HttpContext.Current.Request.Url.ToString().Replace(HttpContext.Current.Request.Url.PathAndQuery, "") + mp3;
                 string x = Remark == null ? "" : Remark;
 
+                string ip = ConfigurationManager.AppSettings["IP"];
                 string a1 = "http://121.199.49.237:12700" + mp3;
                 string a2 = "http://47.110.250.181:12777/" + mp3;
                 string a3= "http://47.103.68.172:6076/" + mp3;
+                //string a4= "http://47.114.175.250:12765/" + mp3;
+                string a4 = ip + mp3;
                 //var data = new
                 //{
                 //    Url= a2,
@@ -84,7 +88,7 @@ namespace Jusoft.YiFang.Api.Controllers
                     Duration = Duration,
                     MediaId = "",
                     OriginUrl = url,
-                    Url = a3,
+                    Url = a4,
                     Remark = x
                 };
                 //LogHelper.WriteLog("服务器" + HttpContext.Current.Request.Url.ToString().Replace(HttpContext.Current.Request.Url.PathAndQuery, ""));

@@ -85,6 +85,7 @@ namespace Jusoft.DingTalk
                                 PasswordHash = user.userid,
                             };
                             dbContext.AC_SysUsers.Add(_newUser);
+                            dbContext.SaveChanges();
                             string sql = string.Format("INSERT dbo.REF_User_Roles(IdSysUsers,IdSysRoles)VALUES({0},{1})", _newUser.Id, nomal.Id);
                             Console.WriteLine(sql);
                             dbContext.Database.ExecuteSqlCommand(sql);

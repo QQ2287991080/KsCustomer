@@ -438,6 +438,7 @@ namespace Jusoft.YiFang.Api.Controllers
                     return 1;
                 case "客服":
                     return 2;
+                  
                 default:
                     return 0;
             }
@@ -467,7 +468,6 @@ namespace Jusoft.YiFang.Api.Controllers
             //获取该用户的首页菜单
             var ss = user.AUTH_User_Menu.Select(p => p.IdSysMenu).ToList();
             var person = dbContext.OR_Person.FirstOrDefault(p => p.LoginName == User.Identity.Name);
-
 
             //p => p.Name == One || p.Name == Two || p.Name == Three
             var role = user.AC_SysRoles.ToList().Select(p => new
@@ -532,7 +532,7 @@ namespace Jusoft.YiFang.Api.Controllers
             if (Num == 2)
             {
                 //where = where.And(p => p.IdPersonSupervision == Person.Id);//督导Id 为当前用户
-                data = dbContext.v_Kf_DataList.Where(p=> p.ManagerId == Id).ToList().Where(p => p.CreateTime.ToString("yyyy-MM") == StartTime.ToString("yyyy-MM") ).Select(p => p.State).ToList();
+                data = dbContext.v_Kf_DataList.Where(p => p.ManagerId == Id).ToList().Where(p => p.CreateTime.ToString("yyyy-MM") == StartTime.ToString("yyyy-MM")).Select(p => p.State).ToList();
             }
             //var data = dbContext.v_Ks_DataList.Where(where).ToList();
             ////where = where.And(p => p.CreateTime.ToString("yyyy-MM").Contains(xx));
